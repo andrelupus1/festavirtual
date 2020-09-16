@@ -113,11 +113,11 @@ export default function LoginPage(props) {
                     />
                   </CardBody>
                   <CardFooter className={classes.cardFooter}>
-                    <Button color="primary" size="lg">
+                    <Button href="landing" color="primary" size="lg">
                       Entrar
                     </Button>
                   </CardFooter>
-                  <p className={classes.divider}>Entre pela sua rede social</p>
+                  <p className={classes.divider}>Entre com sua rede social</p>
                   <CardHeader>
                     <div className={classes.socialLine}>
                       <Button
@@ -140,7 +140,7 @@ export default function LoginPage(props) {
                       </Button>
                       <Button
                         justIcon
-                        href="#festavirtual"
+                        href="landing"
                         target="_blank"
                         color="white"
                         onClick={(e) => e.preventDefault()}
