@@ -2,8 +2,11 @@ import React from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import InputAdornment from "@material-ui/core/InputAdornment";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import Checkbox from "@material-ui/core/Checkbox";
 import Icon from "@material-ui/core/Icon";
 // @material-ui/icons
+import Check from "@material-ui/icons/Check";
 import Email from "@material-ui/icons/Email";
 import People from "@material-ui/icons/People";
 // core components
@@ -22,19 +25,29 @@ import CustomInput from "components/CustomInput/CustomInput.js";
 import styles from "assets/jss/nextjs-material-kit/pages/loginPage.js";
 
 import image from "assets/img/bg7.jpg";
-import logo from "assets/img/logo.png";
-
-// import { List, ListItem } from "@material-ui/core";
 
 const useStyles = makeStyles(styles);
 
 export default function LoginPage(props) {
+  const [checked, setChecked] = React.useState([24, 22]);
   const [cardAnimaton, setCardAnimation] = React.useState("cardHidden");
   setTimeout(function () {
     setCardAnimation("");
   }, 700);
   const classes = useStyles();
-  const { ...rest } = props;
+  //const { ...rest } = props;
+
+  const handleToggle = (value) => {
+    const currentIndex = checked.indexOf(value);
+    const newChecked = [...checked];
+
+    if (currentIndex === -1) {
+      newChecked.push(value);
+    } else {
+      newChecked.splice(currentIndex, 1);
+    }
+    setChecked(newChecked);
+  };
   return (
     <div>
       {/* <Header
@@ -58,16 +71,14 @@ export default function LoginPage(props) {
               <Card className={classes[cardAnimaton]}>
                 <form className={classes.form}>
                   <CardHeader color="primary" className={classes.cardHeader}>
-                    <img alt="..." src={logo} className={classes.logo} />
-                    {/* <h4>Acesso</h4> */}
+                    <h4>Cadastrar-se</h4>
                   </CardHeader>
-
                   <CardBody>
-                    {/* <CustomInput
+                    <CustomInput
                       labelText="Primeiro nome..."
                       id="first"
                       formControlProps={{
-                        fullWidth: true
+                        fullWidth: true,
                       }}
                       inputProps={{
                         type: "text",
@@ -75,9 +86,9 @@ export default function LoginPage(props) {
                           <InputAdornment position="end">
                             <People className={classes.inputIconsColor} />
                           </InputAdornment>
-                        )
+                        ),
                       }}
-                    /> */}
+                    />
                     <CustomInput
                       labelText="E-mail..."
                       id="email"
@@ -111,47 +122,51 @@ export default function LoginPage(props) {
                         autoComplete: "off",
                       }}
                     />
+                    <p className={classes.divider}>
+                      <span
+                        className={
+                          classes.checkboxAndRadio +
+                          " " +
+                          classes.checkboxAndRadioHorizontal
+                        }
+                      >
+                        <FormControlLabel
+                          control={
+                            <Checkbox
+                              tabIndex={-1}
+                              onClick={() => handleToggle(22)}
+                              checked={
+                                checked.indexOf(22) !== -1 ? true : false
+                              }
+                              checkedIcon={
+                                <Check className={classes.checkedIcon} />
+                              }
+                              icon={<Check className={classes.uncheckedIcon} />}
+                              classes={{
+                                checked: classes.checked,
+                                root: classes.checkRoot,
+                              }}
+                            />
+                          }
+                          classes={{
+                            label: classes.label,
+                            root: classes.labelRoot,
+                          }}
+                          label="Aceito os termos"
+                        />
+                      </span>{" "}
+                    </p>
                   </CardBody>
+
                   <CardFooter className={classes.cardFooter}>
                     <Button color="primary" size="lg">
-                      Entrar
+                      Cadastrar
                     </Button>
                   </CardFooter>
-                  <p className={classes.divider}>Entre pela sua rede social</p>
-                  <CardHeader>
-                    <div className={classes.socialLine}>
-                      <Button
-                        justIcon
-                        href="#festavirtual"
-                        target="_blank"
-                        color="white"
-                        onClick={(e) => e.preventDefault()}
-                      >
-                        <i className={"fab fa-twitter"} />
-                      </Button>
-                      <Button
-                        justIcon
-                        href="#festavirtual"
-                        target="_blank"
-                        color="white"
-                        onClick={(e) => e.preventDefault()}
-                      >
-                        <i className={"fab fa-facebook"} />
-                      </Button>
-                      <Button
-                        justIcon
-                        href="#festavirtual"
-                        target="_blank"
-                        color="white"
-                        onClick={(e) => e.preventDefault()}
-                      >
-                        <i className={"fab fa-google-plus-g"} />
-                      </Button>
-                    </div>
-                  </CardHeader>
+                  
                   <CardFooter className={classes.cardFooter}>
-                    <Button href="signup" simple color="primary" size="sm">
-                      Cadastrar
+                    <Button href="login" simple color="primary" size="sm">
+                      Entrar
                     </Button>
                   </CardFooter>
                 </form>

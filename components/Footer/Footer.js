@@ -72,13 +72,12 @@ export default function Footer(props) {
         <div className={classes.right}>
           &copy; {1900 + new Date().getYear()} - FestaVirtual {" "}
           <small>Todos os Direitos Reservado</small>{" "}
-          <Favorite className={classes.icon} />{" "}
           <a
             href="#"
             className={aClasses}
             target="_blank"
           >
-          AD
+          <Favorite className={classes.icon} />{" "}
           </a>{" "}
         </div>
       </div>
