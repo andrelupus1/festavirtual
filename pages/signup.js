@@ -28,7 +28,7 @@ import image from "assets/img/bg7.jpg";
 
 const useStyles = makeStyles(styles);
 
-export default function LoginPage(props) {
+export default function SignupPage(props) {
   const [checked, setChecked] = React.useState([24, 22]);
   const [cardAnimaton, setCardAnimation] = React.useState("cardHidden");
   setTimeout(function () {

@@ -21,7 +21,8 @@ import CustomInput from "components/CustomInput/CustomInput.js";
 
 import styles from "assets/jss/nextjs-material-kit/pages/loginPage.js";
 
-import image from "assets/img/bg7.jpg";
+//import image from "assets/img/bg7.jpg";
+import image from "assets/img/background.jpg";
 import logo from "assets/img/logo.png";
 
 // import { List, ListItem } from "@material-ui/core";
@@ -113,7 +114,7 @@ export default function LoginPage(props) {
                     />
                   </CardBody>
                   <CardFooter className={classes.cardFooter}>
-                    <Button href="landing" color="primary" size="lg">
+                    <Button href="site" color="primary" size="lg">
                       Entrar
                     </Button>
                   </CardFooter>

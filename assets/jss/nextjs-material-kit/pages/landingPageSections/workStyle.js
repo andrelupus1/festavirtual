@@ -22,6 +22,13 @@ const workStyle = {
   textArea: {
     marginRight: "15px",
     marginLeft: "15px"
+  },
+  icon:{
+    color: "#FE3A38"
+  },
+  address:{
+    color: "#999",
+    textAlign:"justify"
   }
 };
 
