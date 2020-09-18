@@ -1,6 +1,4 @@
 import { Component } from "react";
-// @material-ui/icons
-import Room from "@material-ui/icons/Room";
 // @mapbox
 import MapGL, { Marker } from "react-map-gl";
 
@@ -27,8 +25,8 @@ class Map extends Component {
     return (
       <MapGL
         {...this.state.viewport}
-        width= "100vw"
-        height= "100vh"
+        width= "60vw"
+        height= "60vh"
         mapStyle="mapbox://sprites/mapbox/streets-v8"
         // mapStyle="mapbox://sprites/mapbox/bright-v8"
         // mapStyle="mapbox://styles/mapbox/dark-v9"

@@ -243,3 +243,10 @@ Facebook: <https://www.facebook.com/CreativeTim>
 Dribbble: <https://dribbble.com/creativetim>
 
 Instagram: <https://www.instagram.com/CreativeTimOfficial>
+
+
+### Libs Utilizadas
+- MapBox
+
+### Servidor
+- Vercel

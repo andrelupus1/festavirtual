@@ -19,12 +19,6 @@ export default function Contact() {
   const classes = useStyles();
   return (
     <div className={classes.section}>
-       <GridContainer justify="center">
-        <GridItem xs={12} sm={12} md={8}>
-          <Map />
-        </GridItem>
-      </GridContainer>
-
       <GridContainer justify="center">
         <GridItem xs={12} sm={12} md={8}>
           <h2 className={classes.title}>Evento</h2>
@@ -39,6 +33,10 @@ export default function Contact() {
             {"Passagem Bom Jesus, 1234 - Belém"}
           </p>
         </GridItem>
+      </GridContainer>
+
+      <GridContainer justify="center" className={classes.map} >
+        <Map />
       </GridContainer>
 
       <GridContainer justify="center">
@@ -77,7 +75,7 @@ export default function Contact() {
                 }}
               />
               <GridItem xs={12} sm={12} md={4} className={classes.textCenter}>
-                <Button color="primary">Send Message</Button>
+                <Button color="primary">Enviar</Button>
               </GridItem>
             </GridContainer>
           </form>
