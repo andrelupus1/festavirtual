@@ -17,10 +17,11 @@ import styles from "assets/jss/nextjs-material-kit/pages/landingPage.js";
 // Sections for this page Site
 
 // Sections for this page - Demo
+import SectionVideo from "pages-sections/Site-Sections/SectionVideo.js";
 import SectionCarousel from "pages-sections/Site-Sections/SectionCarousel.js";
 import ProductSection from "pages-sections/Site-Sections/information.js";
-import TeamSection from "pages-sections/Site-Sections/Depoiments.js";
-import WorkSection from "pages-sections/Site-Sections/Contact.js";
+import SectionDepoiments from "pages-sections/Site-Sections/SectionDepoiments.js";
+import SectionContact from "pages-sections/Site-Sections/SectionContact.js";
 // import Map from "pages-sections/Site-Sections/Map.js";
 
 const dashboardRoutes = [];
@@ -40,22 +41,27 @@ export default function SitePage(props) {
         fixed
         changeColorOnScroll={{
           height: 400,
-          color: "white"
+          color: "white",
         }}
         {...rest}
       />
-      <Parallax filter responsive image={require("assets/img/julia-e-marcos.jpg")}>
+      <Parallax
+        filter
+        responsive
+        image={require("assets/img/julia-e-marcos.jpg")}
+      >
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={6}>
               <h1 className={classes.title}>Conheça a nossa linda História.</h1>
               <h4>
-                Iremos nos casar e queremos compartilhar um pouco da nossa História de amor,
-                esperamos que você possa fazer parte dela, contribuindo com uma mensagem ou um presente.
-                Desde já agradecemos a sua visita no nosso site.
-              <Favorite className={classes.icon} />{" "}
+                Iremos nos casar e queremos compartilhar um pouco da nossa
+                História de amor, esperamos que você possa fazer parte dela,
+                contribuindo com uma mensagem ou um presente. Desde já
+                agradecemos a sua visita no nosso site.
+                <Favorite className={classes.icon} />{" "}
               </h4>
-                <br />
+              <br />
               {/* <Button
                 color="danger"
                 size="lg"
@@ -73,9 +79,10 @@ export default function SitePage(props) {
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
           <SectionCarousel />
+          <SectionVideo />
+          <SectionDepoiments />
           <ProductSection />
-          <TeamSection />
-          <WorkSection />
+          <SectionContact />
         </div>
       </div>
       <Footer />

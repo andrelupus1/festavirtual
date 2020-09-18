@@ -15,7 +15,7 @@ import styles from "assets/jss/nextjs-material-kit/pages/landingPageSections/wor
 
 const useStyles = makeStyles(styles);
 
-export default function Contact() {
+export default function SectionContact() {
   const classes = useStyles();
   return (
     <div className={classes.section}>

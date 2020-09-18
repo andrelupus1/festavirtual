@@ -53,6 +53,7 @@
     "react-slick": "0.25.2",
     "react-swipeable-views": "0.13.9",
     "styled-components": "5.1.0",
+    "video-react": "^0.14.1",
     "webpack": "4.43.0"
   }
 }
