@@ -21,6 +21,7 @@ const images = [
 export default function Slide() {
   const settings = {
     dots: true,
+    lazyLoad: true,
     infinite: false,
     speed: 500,
     slidesToShow: 4,
