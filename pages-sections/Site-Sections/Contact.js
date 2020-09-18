@@ -9,7 +9,8 @@ import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import CustomInput from "components/CustomInput/CustomInput.js";
 import Button from "components/CustomButtons/Button.js";
-
+import Map from "components/Map/Map.js";
+// Style
 import styles from "assets/jss/nextjs-material-kit/pages/landingPageSections/workStyle.js";
 
 const useStyles = makeStyles(styles);
@@ -18,12 +19,21 @@ export default function Contact() {
   const classes = useStyles();
   return (
     <div className={classes.section}>
+       <GridContainer justify="center">
+        <GridItem xs={12} sm={12} md={8}>
+          <Map />
+        </GridItem>
+      </GridContainer>
+
       <GridContainer justify="center">
-        <GridItem xs={12} sm={12} md={6}>
+        <GridItem xs={12} sm={12} md={8}>
           <h2 className={classes.title}>Evento</h2>
           <p className={classes.address}>
             <Phone className={classes.icon} /> Tel: {"(91)9999-9999"}
           </p>
+        </GridItem>
+
+        <GridItem xs={12} sm={12} md={8}>
           <p className={classes.address}>
             <Room className={classes.icon} /> Local:
             {"Passagem Bom Jesus, 1234 - Belém"}

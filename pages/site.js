@@ -20,7 +20,7 @@ import styles from "assets/jss/nextjs-material-kit/pages/landingPage.js";
 import ProductSection from "pages-sections/Site-Sections/information.js";
 import TeamSection from "pages-sections/Site-Sections/Depoiments.js";
 import WorkSection from "pages-sections/Site-Sections/Contact.js";
-import Map from "pages-sections/Site-Sections/Map.js";
+// import Map from "pages-sections/Site-Sections/Map.js";
 
 const dashboardRoutes = [];
 
@@ -74,7 +74,6 @@ export default function SitePage(props) {
           <ProductSection />
           <TeamSection />
           <WorkSection />
-          <Map />
         </div>
       </div>
       <Footer />

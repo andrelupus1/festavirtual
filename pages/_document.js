@@ -5,7 +5,7 @@ import { ServerStyleSheets } from "@material-ui/styles";
 class MyDocument extends Document {
   render() {
     return (
-      <html lang="en">
+      <html lang="pt-br">
         <Head>
           <meta charSet="utf-8" />
           <meta
@@ -29,6 +29,8 @@ class MyDocument extends Document {
             href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
             rel="stylesheet"
           />
+          {/* MapBox */}
+          <link href="https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css" rel="stylesheet" />
         </Head>
         <body>
           <div id="page-transition"></div>
