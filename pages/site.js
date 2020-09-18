@@ -17,6 +17,7 @@ import styles from "assets/jss/nextjs-material-kit/pages/landingPage.js";
 // Sections for this page Site
 
 // Sections for this page - Demo
+import SectionCarousel from "pages-sections/Site-Sections/SectionCarousel.js";
 import ProductSection from "pages-sections/Site-Sections/information.js";
 import TeamSection from "pages-sections/Site-Sections/Depoiments.js";
 import WorkSection from "pages-sections/Site-Sections/Contact.js";
@@ -71,6 +72,7 @@ export default function SitePage(props) {
       </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
+          <SectionCarousel />
           <ProductSection />
           <TeamSection />
           <WorkSection />
