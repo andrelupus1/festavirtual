@@ -19,7 +19,7 @@ import styles from "assets/jss/nextjs-material-kit/pages/landingPage.js";
 // Sections for this page - Demo
 import SectionVideo from "pages-sections/Site-Sections/SectionVideo.js";
 import SectionCarousel from "pages-sections/Site-Sections/SectionCarousel.js";
-import ProductSection from "pages-sections/Site-Sections/information.js";
+import SectionStore from "pages-sections/Site-Sections/SectionStore.js";
 import SectionDepoiments from "pages-sections/Site-Sections/SectionDepoiments.js";
 import SectionContact from "pages-sections/Site-Sections/SectionContact.js";
 // import Map from "pages-sections/Site-Sections/Map.js";
@@ -81,7 +81,7 @@ export default function SitePage(props) {
           <SectionCarousel />
           <SectionVideo />
           <SectionDepoiments />
-          <ProductSection />
+          <SectionStore />
           <SectionContact />
         </div>
       </div>
