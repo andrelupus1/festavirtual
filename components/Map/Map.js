@@ -25,8 +25,8 @@ class Map extends Component {
     return (
       <MapGL
         {...this.state.viewport}
-        width= "60vw"
-        height= "60vh"
+        width= "50vw"
+        height= "40vh"
         mapStyle="mapbox://sprites/mapbox/streets-v8"
         // mapStyle="mapbox://sprites/mapbox/bright-v8"
         // mapStyle="mapbox://styles/mapbox/dark-v9"
