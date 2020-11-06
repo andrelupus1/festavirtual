@@ -22,6 +22,7 @@ import SectionCarousel from "pages-sections/Site-Sections/SectionCarousel.js";
 import SectionStore from "pages-sections/Site-Sections/SectionStore.js";
 import SectionDepoiments from "pages-sections/Site-Sections/SectionDepoiments.js";
 import SectionContact from "pages-sections/Site-Sections/SectionContact.js";
+import ColorPicker from "components/Picker/ColorPicker.js";
 // import Map from "pages-sections/Site-Sections/Map.js";
 
 const dashboardRoutes = [];
@@ -78,6 +79,7 @@ export default function SitePage(props) {
       </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
+          <ColorPicker />
           <SectionCarousel />
           <SectionVideo />
           <SectionDepoiments />

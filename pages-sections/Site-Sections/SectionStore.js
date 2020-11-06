@@ -11,7 +11,6 @@ import GridItem from "components/Grid/GridItem.js";
 import InfoArea from "components/InfoArea/InfoArea.js";
 // css
 import styles from "assets/jss/nextjs-material-kit/pages/landingPageSections/productStyle.js";
-import ColorPicker from "components/Picker/ColorPicker.js";
 
 const useStyles = makeStyles(styles);
 
@@ -20,8 +19,6 @@ export default function SectionStore() {
   return (
     <div className={classes.section}>
       <GridContainer justify="center">
-        Teste mano
-          < ColorPicker/>
           </GridContainer>
       <GridContainer justify="center">
         <GridItem xs={12} sm={12} md={8}>
