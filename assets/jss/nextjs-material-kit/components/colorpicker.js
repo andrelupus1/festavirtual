@@ -41,7 +41,6 @@ const colorpicker = {
     position: "absolute",
     zIndex: 2,
   },
-
   cover: {
     position: "fixed",
     top: "0px",
@@ -50,7 +49,7 @@ const colorpicker = {
     left: "0px",
   },
   info: {
-    backgroundColor: "#00d3ee",
+    backgroundColor: "#222222",
     color: "#ffffff",
     ...infoBoxShadow,
   },

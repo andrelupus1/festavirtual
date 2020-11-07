@@ -39,6 +39,9 @@ class MyDocument extends Document {
             rel="stylesheet"
             href="https://video-react.github.io/assets/video-react.css"
           />
+          {/* Quill Editor */}
+          <link rel="stylesheet" href="//cdn.quilljs.com/1.2.6/quill.snow.css"></link>
+
         </Head>
         <body>
           <div id="page-transition"></div>
